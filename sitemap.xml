@@ -11,8 +11,20 @@
     <loc>https://example.org/blog/first-post/</loc>
     <lastmod>2021-05-11T15:20:06+02:00</lastmod>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>https://example.org/tags/hugo/</loc>
+    <lastmod>2021-05-11T15:20:06+02:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/meta/</loc>
+    <lastmod>2021-05-11T15:20:06+02:00</lastmod>
   </url><url>
     <loc>https://example.org/tags/</loc>
+    <lastmod>2021-05-11T15:20:06+02:00</lastmod>
+  </url><url>
+    <loc>https://example.org/tags/test/</loc>
+    <lastmod>2021-05-11T15:20:06+02:00</lastmod>
+  </url><url>
+    <loc>https://example.org/about/</loc>
+  </url><url>
+    <loc>https://example.org/categories/</loc>
   </url>
 </urlset>
