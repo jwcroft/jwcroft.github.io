@@ -44,32 +44,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>hugo</title>
-      <link>https://example.org/tags/hugo/</link>
-      <pubDate>Tue, 11 May 2021 15:20:06 +0200</pubDate>
-      
-      <guid>https://example.org/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>meta</title>
-      <link>https://example.org/tags/meta/</link>
-      <pubDate>Tue, 11 May 2021 15:20:06 +0200</pubDate>
-      
-      <guid>https://example.org/tags/meta/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://example.org/tags/test/</link>
-      <pubDate>Tue, 11 May 2021 15:20:06 +0200</pubDate>
-      
-      <guid>https://example.org/tags/test/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

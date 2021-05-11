@@ -18,17 +18,5 @@
 I make no apologies for any profanity contained therein. Peruse if you want: that good shit The notes are ordered more or less according to the curriculum of the relevant course at Chalmers, that is to say they follow the axiomatic approach, starting with the fundamental postulates and building upon them step by step.</description>
     </item>
     
-    <item>
-      <title>First post</title>
-      <link>https://example.org/blog/first-post/</link>
-      <pubDate>Tue, 11 May 2021 15:20:06 +0200</pubDate>
-      
-      <guid>https://example.org/blog/first-post/</guid>
-      <description>Intro Hi, this is just a test.
-Some maths $$ \oint_S \vec E \cdot d\vec s = \frac{Q_{\text{encl}}}{\varepsilon_0}$$
-A bitta code Don&amp;rsquo;t get to astonished, it&amp;rsquo;s just a bit o&#39; code.
-int x = 100; int main(){ funclol(); }  </description>
-    </item>
-    
   </channel>
 </rss>
