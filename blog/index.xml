@@ -27,5 +27,16 @@
 I make no apologies for any profanity contained therein. Peruse if you want: that good shit The notes are ordered more or less according to the curriculum of the relevant course at Chalmers, that is to say they follow the axiomatic approach, starting with the fundamental postulates and building upon them step by step.</description>
     </item>
     
+    <item>
+      <title>Mathematical Typesetting in Hugo</title>
+      <link>https://jwcroft.github.io/blog/mathematical-typesetting-in-hugo/</link>
+      <pubDate>Wed, 30 Dec 2020 15:31:46 +0100</pubDate>
+      
+      <guid>https://jwcroft.github.io/blog/mathematical-typesetting-in-hugo/</guid>
+      <description>MathJax MathJax 3 is fully supported in Goldmark and is only fractionally slower than Katex.
+Create mathjax3.html in /layouts/partials and add the following:
+&amp;lt;script&amp;gt; MathJax = { tex: { inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]], displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\\[&#39;, &#39;\\]&#39;]], processEscapes: true, processEnvironments: true, tags: &#39;ams&#39; }, svg: { fontCache: &#39;global&#39; }, options: { skipHtmlTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } }; window.addEventListener(&#39;load&#39;, (event) =&amp;gt; { document.querySelectorAll(&amp;quot;mjx-container&amp;quot;).forEach(function(x){ x.parentElement.classList += &#39;has-jax&#39;}) }); &amp;lt;/script&amp;gt; &amp;lt;script src=&amp;quot;https://polyfill.</description>
+    </item>
+    
   </channel>
 </rss>

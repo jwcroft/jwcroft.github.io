@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <title>Mathematical Typesetting in Hugo | John Croft</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.d248889ade97b47f1019d7ed7b549dd4134bd368bb48bcb3c93b37f3e45ba754.css" integrity="sha256-0kiImt6XtH8QGdfte1Sd1BNL02i7SLyzyTs38&#43;Rbp1Q="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.5854acdab4a3a3fbdc3102c31388201cc67070327618fb4e4a0382727a8f3cd1.css" integrity="sha256-WFSs2rSjo/vcMQLDE4ggHMZwcDJ2GPtOSgOCcnqPPNE="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/jwcroft.github.io\/"
+      },
+      "articleSection" : "blog",
+      "name" : "Mathematical Typesetting in Hugo",
+      "headline" : "Mathematical Typesetting in Hugo",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-12-30 15:31:46 \u002b0100 CET",
+      "dateModified" : "2020-12-30 15:31:46 \u002b0100 CET",
+      "url" : "https:\/\/jwcroft.github.io\/blog\/mathematical-typesetting-in-hugo\/",
+      "wordCount" : "318",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/about">about</a>
+      </li>
+    
+      <li>
+        <a  href="/cv">cv</a>
+      </li>
+    
+      <li>
+        <a  href="/">home</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">notes</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Mathematical Typesetting in Hugo</h1>
+            <time datetime="2020-12-30 15:31:46 &#43;0100 CET" class="post__date">Dec 30, 2020</time> 
+          </header>
+          <article class="post__content">
+              
+<h2 id="mathjax">MathJax<a class="anchor" href="#mathjax">#</a></h2>
+<p>MathJax 3 is fully supported in Goldmark and is only fractionally slower than Katex.</p>
+<p>Create <code>mathjax3.html</code> in /layouts/partials and add the following:</p>
+<pre><code class="language-javascript">&lt;script&gt;
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      tags: 'ams'
+      
+    },
+    svg: {
+      fontCache: 'global'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) =&gt; {
+      document.querySelectorAll(&quot;mjx-container&quot;).forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+&lt;/script&gt;
+&lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; id=&quot;MathJax-script&quot; async
+  src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>Include the partial in header/footer using</p>
+<pre><code class="language-html">{{ if .Params.mathjax3}}{{ partial &quot;mathjax3.html&quot; . }}{{ end }} 
+</code></pre>
+<p>allowing a frontmatter toggle.</p>
+<p>Also include this in your main stylesheet. I don&rsquo;t know what it does, just that I ought to have it.</p>
+<pre><code class="language-html">code.has-jax {
+  -webkit-font-smoothing: antialiased;
+  background: inherit !important;
+  border: none !important;
+  font-size: 100%;
+}
+</code></pre>
+<hr>
+<h3 id="mathjax-usage">MathJax Usage<a class="anchor" href="#mathjax-usage">#</a></h3>
+<p>MathJax is more featureful than Katex.</p>
+<p>Like, a lot more.</p>
+<p>Check <a href="http://docs.mathjax.org/en/latest/input/tex/index.html">http://docs.mathjax.org/en/latest/input/tex/index.html</a> for details.</p>
+<hr>
+<h2 id="katex">Katex<a class="anchor" href="#katex">#</a></h2>
+<p>There is unfortunately (as of Jan 2021) no native Hugo support for Katex besides in it&rsquo;s deprecated renderer MMark.
+It works in Goldmark but lacks support for inline math.
+At present I would personally use MathJax3.</p>
+<p>Create <code>katex.html</code> in layouts/partials with the following contents:</p>
+<pre><code class="language-html">&lt;!-- CSS File --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css&quot; integrity=&quot;sha384-qCEsSYDSH0x5I45nNW4oXemORUZnYFtPy/FqB/OjqxabTMW5HVaaH9USK4fN3goV&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+&lt;!-- JS Fle --&gt;
+&lt;script defer src=&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.js&quot; integrity=&quot;sha384-YFVvRUwgqxkAVN9bmAVLsKilmOKfQLyUx0ZlmDNs0aBUTsvMLnRxE3Km0NrZa0i9&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+
+ &lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;
+&lt;script defer src=&quot;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js&quot; integrity=&quot;sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa&quot; crossorigin=&quot;anonymous&quot;
+    onload=&quot;renderMathInElement(document.body);&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>Include the partial in header/footer using</p>
+<pre><code class="language-html">{{ if .Params.katex}}{{ partial &quot;katex.html&quot; . }}{{ end }} 
+</code></pre>
+<p>which will allow you to toggle katex on a per-page basis.</p>
+<hr>
+<h3 id="katex-usage">Katex Usage<a class="anchor" href="#katex-usage">#</a></h3>
+<p><em>mmark</em> must be used as the renderer.</p>
+<p><code>markup = &quot;mmark&quot;</code></p>
+<p>and katex enabled</p>
+<p><code>katex = true</code></p>
+<p>Inline math is the default. Eg.</p>
+<pre><code>Integrate $$ \int x^2 dx $$
+</code></pre>
+<p>Integrate $$ \int x^2 dx $$</p>
+<p>Block math is done by inserting empty lines above and below the expression. Eg.</p>
+<pre><code>
+$$ \int x^2 dx $$
+
+</code></pre>
+<p>$$ \oint \vec E \cdot d\vec A = \frac{Q}{\varepsilon_0} $$</p>
+
+
+              
+                  
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      tags: 'ams'
+      
+    },
+    svg: {
+      fontCache: 'global'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      enableMenu: false 
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+              
+          </article>
+          
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        <a class="tag__link" href="https://jwcroft.github.io/tags/meta/">meta</a>
+    </li>
+    <li class="tag__item">
+        <a class="tag__link" href="https://jwcroft.github.io/tags/latex/">latex</a>
+    </li></ul>
+
+ <div class="pagination">
+  
+
+  
+    <a class="pagination__item" href="https://jwcroft.github.io/blog/emft-notes/">
+      <span class="pagination__label">Next Post</span>
+      <span class="pagination__title" >EMFT Notes</span>
+    </a>
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="GitHub"
+         href="https://github.com/jwcroft"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://jwcroft.github.io/svg/github.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p>© 2021</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.575dda8d49ee02639942c63564273e6da972ab531dda26a08800bdcb477cbd7f.js" integrity="sha256-V13ajUnuAmOZQsY1ZCc&#43;balyq1Md2iagiAC9y0d8vX8=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>
