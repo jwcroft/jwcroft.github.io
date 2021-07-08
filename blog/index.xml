@@ -7,17 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>© {year}</copyright>
-    <lastBuildDate>Tue, 11 May 2021 16:51:58 +0200</lastBuildDate><atom:link href="https://jwcroft.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>EMFT Notes</title>
-      <link>https://jwcroft.github.io/blog/emft-notes/</link>
-      <pubDate>Tue, 11 May 2021 16:51:58 +0200</pubDate>
-      
-      <guid>https://jwcroft.github.io/blog/emft-notes/</guid>
-      <description>I&amp;rsquo;ve compiled a few notes on electromagnetic field theory (mainly electrostatics thus far), a subject that has always eluded me until recently when things really started to click.
-I make no apologies for any profanity contained therein. Peruse if you want: that good shit The notes are ordered more or less according to the curriculum of the relevant course at Chalmers, that is to say they follow the axiomatic approach, starting with the fundamental postulates and building upon them step by step.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 30 Dec 2020 15:31:46 +0100</lastBuildDate><atom:link href="https://jwcroft.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mathematical Typesetting in Hugo</title>
       <link>https://jwcroft.github.io/blog/mathematical-typesetting-in-hugo/</link>
