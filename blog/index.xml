@@ -7,24 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <copyright>© {year}</copyright>
-    <lastBuildDate>Mon, 17 May 2021 19:30:22 +0200</lastBuildDate><atom:link href="https://jwcroft.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Dec 2020 15:31:46 +0100</lastBuildDate><atom:link href="https://jwcroft.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Dark Souls Makes Me Use My Brain</title>
-      <link>https://jwcroft.github.io/blog/dark-souls-makes-me-use-my-brain/</link>
-      <pubDate>Mon, 17 May 2021 19:30:22 +0200</pubDate>
+      <title>Mathematical Typesetting in Hugo</title>
+      <link>https://jwcroft.github.io/blog/mathematical-typesetting-in-hugo/</link>
+      <pubDate>Wed, 30 Dec 2020 15:31:46 +0100</pubDate>
       
-      <guid>https://jwcroft.github.io/blog/dark-souls-makes-me-use-my-brain/</guid>
-      <description>This article is pretty empty&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>EMFT Notes</title>
-      <link>https://jwcroft.github.io/blog/emft-notes/</link>
-      <pubDate>Tue, 11 May 2021 16:51:58 +0200</pubDate>
-      
-      <guid>https://jwcroft.github.io/blog/emft-notes/</guid>
-      <description>I&amp;rsquo;ve compiled a few notes on electromagnetic field theory (mainly electrostatics thus far), a subject that has always eluded me until recently when things really started to click.
-I make no apologies for any profanity contained therein. Peruse if you want: that good shit The notes are ordered more or less according to the curriculum of the relevant course at Chalmers, that is to say they follow the axiomatic approach, starting with the fundamental postulates and building upon them step by step.</description>
+      <guid>https://jwcroft.github.io/blog/mathematical-typesetting-in-hugo/</guid>
+      <description>MathJax MathJax 3 is fully supported in Goldmark and is only fractionally slower than Katex.
+Create mathjax3.html in /layouts/partials and add the following:
+&amp;lt;script&amp;gt; MathJax = { tex: { inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]], displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\\[&#39;, &#39;\\]&#39;]], processEscapes: true, processEnvironments: true, tags: &#39;ams&#39; }, svg: { fontCache: &#39;global&#39; }, options: { skipHtmlTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } }; window.addEventListener(&#39;load&#39;, (event) =&amp;gt; { document.querySelectorAll(&amp;quot;mjx-container&amp;quot;).forEach(function(x){ x.parentElement.classList += &#39;has-jax&#39;}) }); &amp;lt;/script&amp;gt; &amp;lt;script src=&amp;quot;https://polyfill.</description>
     </item>
     
   </channel>
