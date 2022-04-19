@@ -19,14 +19,5 @@ Create mathjax3.html in /layouts/partials and add the following:
 &amp;lt;script&amp;gt; MathJax = { tex: { inlineMath: [[&#39;$&#39;, &#39;$&#39;], [&#39;\\(&#39;, &#39;\\)&#39;]], displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\\[&#39;, &#39;\\]&#39;]], processEscapes: true, processEnvironments: true, tags: &#39;ams&#39; }, svg: { fontCache: &#39;global&#39; }, options: { skipHtmlTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;] } }; window.addEventListener(&#39;load&#39;, (event) =&amp;gt; { document.querySelectorAll(&amp;quot;mjx-container&amp;quot;).forEach(function(x){ x.parentElement.classList += &#39;has-jax&#39;}) }); &amp;lt;/script&amp;gt; &amp;lt;script src=&amp;quot;https://polyfill.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://jwcroft.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jwcroft.github.io/about/</guid>
-      <description>Hi! My name&#39;s John.  I&amp;rsquo;m a student at Chalmers University of Technology, pursuing a Master&amp;rsquo;s degree in Embedded Electronic System Design.</description>
-    </item>
-    
   </channel>
 </rss>

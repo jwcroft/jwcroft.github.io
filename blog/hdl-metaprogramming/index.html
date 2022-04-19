@@ -2,7 +2,7 @@
 <html lang="en-gb">
 
 <head>
-  <title> | John Croft</title>
+  <title>HDL Metaprogramming | John Croft</title>
 
   <meta charset="UTF-8">
   <meta name="language" content="en">
@@ -41,16 +41,29 @@
 
 <script type="application/ld+json">
   
-    { 
-      "@context": "http://schema.org", 
-      "@type": "WebSite", 
-      "url": "https:\/\/jwcroft.github.io\/about\/",
-      "name": "",
-      "author": {
-        "@type": "Person",
-        "name": ""
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/jwcroft.github.io\/"
       },
-      "description": ""
+      "articleSection" : "blog",
+      "name" : "HDL Metaprogramming",
+      "headline" : "HDL Metaprogramming",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-08-28 11:29:53 \u002b0200 CEST",
+      "dateModified" : "2021-08-28 11:29:53 \u002b0200 CEST",
+      "url" : "https:\/\/jwcroft.github.io\/blog\/hdl-metaprogramming\/",
+      "wordCount" : "120",
+      "keywords" : ["Blog"]
     }
   
   </script>
@@ -83,7 +96,8 @@
       </li>
     
       <li>
-        <a  href="/blog">notes</a>
+        <a  class="active"
+         href="/blog">notes</a>
       </li>
     
   </ul>
@@ -98,14 +112,19 @@
       <div class="post__container">
         <div class="post">
           <header class="post__header">
-            <h1 id="post__title"></h1>
-            
+            <h1 id="post__title">HDL Metaprogramming</h1>
+            <time datetime="2021-08-28 11:29:53 &#43;0200 CEST" class="post__date">Aug 28, 2021</time> 
           </header>
           <article class="post__content">
               
-<img src="/PROFILE.webp" alt="Profile pic" style="border-radius:5%;width:40%;margin:15px;">
-<h2> Hi! My name's John. </h2>
-<p>I&rsquo;m a student at Chalmers University of Technology, pursuing a Master&rsquo;s degree in <em>Embedded Electronic System Design</em>.</p>
+<p>The two dominant Hardware Description Languages in the industry are VHDL and (System)Verilog.</p>
+<p>They suck.
+VHDL especially has so many sytactic gotchas that I still need to use the Duolos golden reference guide.
+I&rsquo;ve never even managed to make Verilog do anything useful at all due to how needlessly baroque the language is (even compared to vhdl!).</p>
+<p>If only there was a way to leverage some <em>modern</em> language with all the powerful abstraction and syntax that that entails for the design, and then simply convert it to one of the old guard languages as a sort of intermediate.</p>
+<p>Especially nice would be if I could use something like python.</p>
+<p>MyHDL seems to fit this bill.
+Let&rsquo;s give it a try.</p>
 
 
               
@@ -114,9 +133,9 @@
 
  <div class="pagination">
   
-    <a class="pagination__item" href="https://jwcroft.github.io/cv/">
+    <a class="pagination__item" href="https://jwcroft.github.io/blog/ssh-authentication/">
         <span class="pagination__label">Previous Post</span>
-        <span class="pagination__title">CV</span>
+        <span class="pagination__title">Ssh Authentication</span>
     </a>
   
 
