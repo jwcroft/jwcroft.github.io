@@ -1,5 +1,7 @@
 # jwcroft.github.io
 
+https://jwcroft.github.io
+
 To make changes to the site:
 1. Edit files in repo `jwcroft.github.io-backend`.
 2. Compile with Hugo. 
