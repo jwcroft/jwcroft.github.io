@@ -42,11 +42,11 @@
             <h1>
                <span>John Croft</span><span id="rbw" class="fancy">.</span>
             </h1>
-            <!-- <div class="navbar_row">
+            <div class="navbar_row">
                <a href="/projects">Projects</a>
                <a href="/notes">Notes</a>
                <a href="/about">About Me</a>
-            </div> -->
+            </div>
          </div>
       </div>
 
